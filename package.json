@@ -33,5 +33,13 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "styled-components": "^4.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapphirus/react-styled-components-storybook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sapphirus/react-styled-components-storybook/issues"
+  },
+  "homepage": "https://github.com/sapphirus/react-styled-components-storybook#readme"
 }
