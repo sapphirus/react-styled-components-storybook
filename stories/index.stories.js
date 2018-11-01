@@ -6,8 +6,9 @@ import { linkTo } from '@storybook/addon-links';
 import backgrounds from "@storybook/addon-backgrounds";
 import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs/react';
 
-import { Button, Welcome } from '@storybook/react/demo';
+import { Welcome } from '@storybook/react/demo';
 
+import Button from '../src/atoms/button';
 import InputText from '../src/atoms/inputtext';
 
 // storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
