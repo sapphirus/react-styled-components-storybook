@@ -10,11 +10,13 @@ import { Welcome } from '@storybook/react/demo';
 
 import Button from '../src/atoms/button';
 import InputText from '../src/atoms/inputtext';
+import ProgressBar from '../src/atoms/progress'
 
 // storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
+  .addDecorator(withKnobs)
+  .add('with text', () => <Button onClick={action('clicked')}>{text('Label', 'Hello Button')}</Button>)
   .add('with some emoji', () => (
     <Button onClick={action('clicked')}>
       <span role="img" aria-label="so cool">
@@ -34,3 +36,12 @@ storiesOf('Controls', module)
     Password: 'password',
     Number: 'number'
   }, 'text')}/>);
+
+storiesOf('Progress', module)
+  .addDecorator(withKnobs)
+  .add('ProgressBar', () => <ProgressBar value={number('Range', '40', {
+     range: true,
+     min: 0,
+     max: 100,
+     step: 1,
+  })} />);
